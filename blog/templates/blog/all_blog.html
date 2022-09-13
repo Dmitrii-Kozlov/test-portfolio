@@ -1,1 +1,10 @@
-all_blog!
+{% extends "portfolio_app/base.html" %} {% block title %}Blogs{% endblock %}
+{%block content %} {% for blog in blogs %}
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ blog.title }}</h5>
+    <p class="card-text">{{ blog.description }}</p>
+  </div>
+  <div class="card-footer text-muted">Created {{ blog.timestamp }}</div>
+</div>
+{% endfor %} {% endblock %}
