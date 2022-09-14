@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Blog
 
 def all_blog(request):
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.order_by('-timestamp')
     context = {
         'blogs': blogs
     }
