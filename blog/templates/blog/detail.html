@@ -1,0 +1,5 @@
+{% extends "portfolio_app/base.html" %} {% block title %}Blog #{{ blog.id }}
+{%endblock %} {%block content %}
+<h1>{{ blog.title }}</h1>
+<p>{{ blog.description }}</p>
+{% endblock %}

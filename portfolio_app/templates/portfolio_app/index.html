@@ -2,7 +2,7 @@
 {%block content %} {% load static %}
 <h1>My portfolio page</h1>
 <img src="{% static 'portfolio_app/django.jpeg' %}" />
-<a href="{% static 'portfolio_app/ppp.pdf' %}">PDF</a>
+<a href="{% url 'blog:all_blog' %}">Blog </a>
 <div class="row">
   {% for project in projects %}
   <div class="col-sm-3">

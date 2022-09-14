@@ -19,7 +19,21 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-    {% load static %} {% block content %} {% endblock %}
+    {% load static %}
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url 'blog:all_blog' %}">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% static 'portfolio_app/ppp.pdf' %}"
+          >Resume</a
+        >
+      </li>
+    </ul>
+    {% block content %} {% endblock %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
